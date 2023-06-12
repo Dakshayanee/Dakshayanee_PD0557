@@ -1,0 +1,12 @@
+package com.app.schedular;
+
+import org.springframework.scheduling.annotation.Scheduled;
+
+public class Schedular {
+	
+	@Scheduled(fixedDelay = 1000)
+   public void scheduledtask() {
+	   System.out.println("Fixed rate task - " + System.currentTimeMillis() / 1000);
+   }	
+
+}

@@ -1,0 +1,27 @@
+package com.app.entities;
+
+import java.time.LocalDateTime;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+public class DateAndTime extends BaseEntity {
+	
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+	private LocalDateTime medicineTime;
+
+	public DateAndTime(LocalDateTime medicineTime) {
+		super();
+		this.medicineTime = medicineTime;
+	}
+	public DateAndTime() {}
+	public LocalDateTime getMedicineTime() {
+		return medicineTime;
+	}
+	public void setMedicineTime(LocalDateTime medicineTime) {
+		this.medicineTime = medicineTime;
+	}
+	
+	
+
+}

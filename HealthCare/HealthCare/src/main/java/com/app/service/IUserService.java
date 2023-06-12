@@ -1,0 +1,15 @@
+package com.app.service;
+
+import java.util.List;
+
+import com.app.entities.Disease;
+import com.app.entities.User;
+
+public interface IUserService {
+	List<User> getAllUserDetails();
+	
+	User addOrEditUser(User uesr);
+	
+	String deleteUserDetails(Integer userid);
+	
+}

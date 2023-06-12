@@ -1,0 +1,47 @@
+package com.app.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.app.entities.Disease;
+import com.app.entities.User;
+import com.app.service.IUserService;
+
+@RestController
+@RequestMapping("/user")
+@CrossOrigin
+public class UserController {
+	
+	@Autowired
+	private IUserService uesrservice;
+	
+	public UserController() {
+		System.out.println("in def ctor " + getClass());
+	}
+	
+	@GetMapping
+	public List<User> getallUser(){
+		return uesrservice.getAllUserDetails();
+		
+	}
+	
+	@PostMapping
+	public User addNewUser(@RequestBody User uesr ){
+		return uesrservice.addOrEditUser(uesr);
+	}
+	
+	public String deleteUserDetails(@PathVariable Integer userid) {
+		System.out.println("in del user"+userid);
+		return uesrservice.deleteUserDetails(userid);
+	}
+	
+
+}

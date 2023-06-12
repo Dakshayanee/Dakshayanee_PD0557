@@ -1,0 +1,32 @@
+package com.app.entities;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
+@Table(name="medication")
+public class Medication extends BaseEntity {
+	
+	@Column(length=30)
+	private String medicineName;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+	private LocalDateTime Date;
+	
+	@Column(name="doses")
+	private int dose;
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

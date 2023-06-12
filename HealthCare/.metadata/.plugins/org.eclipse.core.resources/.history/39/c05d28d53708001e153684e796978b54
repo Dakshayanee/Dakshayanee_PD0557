@@ -1,0 +1,12 @@
+package com.app.entities;
+
+import java.time.LocalDateTime;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+public class DateAndTime {
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+	private LocalDateTime medicineTime;
+
+}

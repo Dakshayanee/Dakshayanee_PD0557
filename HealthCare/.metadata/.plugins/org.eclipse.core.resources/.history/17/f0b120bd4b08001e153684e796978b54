@@ -1,0 +1,23 @@
+package com.app.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.app.entities.User;
+import com.app.repo.UserRepo;
+
+@Service
+@Transactional
+public class UserServiceImpl implements IUserService {
+	
+	private UserRepo userrepo; 
+
+	@Override
+	public User addOrEditDisease(User uesr) {
+		
+		return userrepo.save(user) ;
+	}
+	
+
+}

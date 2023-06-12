@@ -1,0 +1,25 @@
+package com.app.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.app.entities.Disease;
+import com.app.entities.User;
+import com.app.service.IUserService;
+
+public class UserController {
+	
+	@Autowired
+	private IUserService uesrservice;
+	
+	public UserController() {
+		System.out.println("in def ctor " + getClass());
+	}
+	
+	@PostMapping
+	public User addNewUser(@RequestBody User uesr ){
+		return uesrservice.addOrEditUser(uesr);
+	}
+
+}

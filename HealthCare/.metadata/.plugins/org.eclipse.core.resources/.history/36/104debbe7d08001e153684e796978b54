@@ -1,0 +1,10 @@
+package com.app.schedular;
+
+public class Schedular {
+	
+	@Scheduled(fixedDelay = 1000)
+   public void scheduledtask() {
+	   System.out.println("Fixed delay task -");
+   }	
+
+}

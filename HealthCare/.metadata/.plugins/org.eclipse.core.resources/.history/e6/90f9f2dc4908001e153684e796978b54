@@ -1,0 +1,31 @@
+
+#Tomcat server port number 8080
+server.port=8080
+server.servlet.context-path=/HealthCare
+#DB properties
+spring.datasource.url=jdbc:mysql://localhost:3306/HealthCare?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+spring.datasource.username=root
+spring.datasource.password=root123
+
+# JPA properties
+spring.jpa.show-sql = true
+spring.jpa.hibernate.ddl-auto = update
+
+#Disable open session in view 
+spring.jpa.open-in-view=false
+#logging.level.org.springframework.orm.hibernate5=DEBUG
+#logging.file.name=springlog.log
+#logging.pattern.file=%d{yyyy-mm-dd}-%msg %n
+
+#file.upload.location=user.home/images
+#file.upload.location="E:\CDAC PROJECT\CDAC-Project-Go-Grocers\5_Images\Images"
+#file.upload.location="G://ArtGallery//Ecommerce Art-Gallery//3_FrontEnd//artgallery//public//Img"
+spring.servlet.multipart.max-file-size=50MB
+spring.servlet.multipart.max-request-size=50MB
+#Disable open session in view 
+
+# JWT Encryption salt
+#jwt.secret=abc123def456  
+#JWT expiration timeout 24*3600*1000
+
+
